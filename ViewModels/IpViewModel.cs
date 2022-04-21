@@ -7,14 +7,18 @@ namespace NetMinion.ViewModels
     {
         private IpModel ipModel;
 
-
-        // private string ipAddress =  string.Empty; 
         public string IpAddress { 
             get => ipModel.IpAddress; 
             set => this.RaiseAndSetIfChanged(ref ipModel.IpAddress, value); 
         }
-        public string HostName { get; set; } 
-        public string PingStatus { get; set; }
+        public string HostName { 
+            get => ipModel.HostName; 
+            set => this.RaiseAndSetIfChanged(ref ipModel.HostName, value); 
+        } 
+        public string PingStatus { 
+            get => ipModel.PingStatus; 
+            set => this.RaiseAndSetIfChanged(ref ipModel.PingStatus, value); 
+        }
 
         public IpViewModel( IpModel ipModel)
         {
