@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="NetMinion.Views.NetMinionView">
+
+    <Grid ShowGridLines="true">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="16"/> 
+        </Grid.ColumnDefinitions>
+
+        <TextBox Height="32" Width="128" Grid.Row = "1" Grid.Column = "1" Text="{Binding Message}"  
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+
+        <Button Content="Button" Command="{Binding CommandPingAll }" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+       <DataGrid Grid.Row = "3" Grid.Column = "1" Name="MyDataGrid" Margin="4" Items="{Binding Items}" Height="500" ColumnWidth="200" CanUserResizeColumns="True" VerticalAlignment="Stretch">
+         <DataGrid.Columns>
+           <DataGridTextColumn Header="IP Address" Binding="{Binding IpAddress}" IsReadOnly="True" />
+           <DataGridTextColumn Header="HostName" Binding="{Binding HostName}" IsReadOnly="True" />
+           <DataGridTextColumn Header="Ping Status" Binding="{Binding PingStatus}" IsReadOnly="True" />
+         </DataGrid.Columns>
+       </DataGrid>
+
+    </Grid>
+</UserControl>

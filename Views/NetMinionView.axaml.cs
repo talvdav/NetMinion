@@ -5,14 +5,14 @@ using NetMinion.ViewModels;
 
 namespace NetMinion.Views
 {
-    public partial class IpListView : UserControl
+    public partial class NetMinionView : UserControl
     {
 
-        IpListViewModel ipListViewModel;
-        public IpListView()
+        NetMinionViewModel netMinionViewModel;
+        public NetMinionView()
         {
-            ipListViewModel = new IpListViewModel();
-            this.DataContext = ipListViewModel;
+            netMinionViewModel = new NetMinionViewModel();
+            this.DataContext = netMinionViewModel;
 
             InitializeComponent();
         }

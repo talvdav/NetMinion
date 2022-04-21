@@ -12,10 +12,9 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <Grid ShowGridLines="true">
+    <!-- Grid ShowGridLines="true">
         <Grid.RowDefinitions>
             <RowDefinition Height="16"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="16"/>
         </Grid.RowDefinitions>
@@ -24,8 +23,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="16"/> 
         </Grid.ColumnDefinitions>
-        <Button Content="{Binding Greeting}" Command={Binding CommandButton} Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <iplist:IpListView Grid.Row="2" Grid.Column="1"/>
-    </Grid>
+    </Grid -->
+        <iplist:NetMinionView Grid.Row="1" Grid.Column="1"/>
 
 </Window>

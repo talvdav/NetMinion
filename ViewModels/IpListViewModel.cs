@@ -1,12 +1,10 @@
-
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Collections.ObjectModel;
+// using NetMinion.ViewModels;
 
 namespace NetMinion.ViewModels
 {
-    public class IpListViewModel : ViewModelBase
+    public class IpListViewModel : ObservableCollection<IpViewModel>
     {
-        public string MyGreeting => "Huhu";
+    
     }
 }

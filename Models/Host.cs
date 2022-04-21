@@ -1,13 +1,13 @@
 
 namespace NetMinion.Models
 {
-    public class Host
+    public class IpViewModel
     {
         public string IpAddress { get; set; }
         public string HostName { get; set; } 
         public string PingStatus { get; set; }
 
-        public Host()
+        public IpViewModel()
         {
             this.IpAddress = "";
             this.HostName = "";
