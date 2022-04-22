@@ -4,9 +4,9 @@ namespace NetMinion.Models
     public class IpModel
     {
     
-        public string IpAddress = string.Empty;
-        public string HostName = string.Empty; 
-        public string PingStatus = string.Empty;
+        public string IpAddress;
+        public string HostName; 
+        public string PingStatus; 
 
         public IpModel( )
         {

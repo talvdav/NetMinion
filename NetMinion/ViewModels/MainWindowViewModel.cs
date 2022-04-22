@@ -7,8 +7,6 @@ namespace NetMinion.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         public string Greeting => "MainWindowViewModel";
-
-
         // ICommand Button
         // ExecuteButton()
         // {

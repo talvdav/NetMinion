@@ -4,13 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="NetMinion.Views.NetMinionView">
-
     <Grid ShowGridLines="true">
         <Grid.RowDefinitions>
             <RowDefinition Height="16"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="16"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -25,7 +24,7 @@
 
         <Button Content="Button" Command="{Binding CommandPingAll }" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-       <DataGrid Grid.Row = "3" Grid.Column = "1" Name="MyDataGrid" Margin="4" Items="{Binding Items}" Height="500" ColumnWidth="200" CanUserResizeColumns="True" VerticalAlignment="Stretch">
+       <DataGrid Grid.Row = "3" Grid.Column = "1" Name="MyDataGrid" Margin="4" Items="{Binding IpListViewModel}" Height="500" ColumnWidth="200" CanUserResizeColumns="True" VerticalAlignment="Stretch">
          <DataGrid.Columns>
            <DataGridTextColumn Header="IP Address" Binding="{Binding IpAddress}" IsReadOnly="True" />
            <DataGridTextColumn Header="HostName" Binding="{Binding HostName}" IsReadOnly="True" />

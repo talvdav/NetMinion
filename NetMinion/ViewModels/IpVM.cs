@@ -7,9 +7,10 @@ namespace NetMinion.ViewModels
     {
         private IpModel ipModel;
 
+        private string ipAddress;
         public string IpAddress { 
-            get => ipModel.IpAddress; 
-            set => this.RaiseAndSetIfChanged(ref ipModel.IpAddress, value); 
+            get => ipAddress; 
+            set => this.RaiseAndSetIfChanged(ref ipAddress, value); 
         }
         public string HostName { 
             get => ipModel.HostName; 
@@ -23,6 +24,10 @@ namespace NetMinion.ViewModels
         public IpViewModel( IpModel ipModel)
         {
             this.ipModel = ipModel;
+            this.IpAddress = this.ipModel.IpAddress;
+            this.HostName = this.ipModel.HostName;
+            this.PingStatus = this.ipModel.PingStatus;
+
         }
     }
 }
