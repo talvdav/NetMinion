@@ -8,7 +8,6 @@ namespace NetMinion.Models
         public string HostName = string.Empty; 
         public string PingStatus = string.Empty;
 
-
         public IpModel( )
         {
             this.IpAddress = string.Empty;
